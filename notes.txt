@@ -1,0 +1,37 @@
+Week 1: 5/26-5/30
+Daily Recap:
+5/26/25 (arrival)
+- Arrived at Huntsville and set up the AirBNB
+- Re-reviewed tasks and resources Mundy provided
+- Explored Git and helped Nasya out
+- Rubber duck knowledge sharing of individual projects for better understanding
+
+5/27/25 (First full day)
+- Set up computers in the intern room
+- Short tour on the way to the Spine (cool hallway) and AI lab
+- Lunch with the AI branch at Viet Huong -- food was pretty good but got to talk to a few members of the team and that was great
+- Onboarding tasks and software downloads
+- Tour 2.0 with Mundy (talked about tasks for the summer: blog, journal club, and presentations)
+- Onboarding training back in the intern room
+
+5/28/25
+- More training in the morning
+- Project meeting with Mundy where I learned about my project (AI thing) and Nasya's project (persistent homology)
+- Leftover pasta lunch
+- Kept dong trainings then researched some things about RAG
+- Another Mundy-led tour—met people working with/on RL, web dev, modeling, and more
+- Sorted out timesheets and talked weekend plans with Mundy (cigar box festival, farmer's market, etc.)
+
+5/29/25
+- Researched a bunch of RAG techniques and tried to compile different ways of doing it.
+- Got a small database running with some fake data
+- Talked to Mundy about project and asked questions
+- Mundy texted about possible weekend activities
+
+5/30/25
+- Did some more research but focused in on a more specific way of doing RAG
+- Then I even tried to set up a local LLM and try some prompts. 
+- 10:30 Dylan's last meal at Five Guys
+- 12:00 Talked to some other employees about things they do. Even got to meet a member of the electronics and GNC team which was super cool. 
+- 13:15 Met with Mundy to learn about how to improve our futures (networking, blog, extra stuff)
+- 15:30 Continued messing with LLMs and helped Nasya and Daniel out a little with their projects until the end of the day

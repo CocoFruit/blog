@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Internship Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f0fb;
+      color: #2e2e2e;
+    }
+
+    header {
+      background-color: #bba8e4;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    nav {
+      background-color: #e2d6f7;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #5a3e85;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #3a2560;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .week {
+      background: #fff;
+      border: 1px solid #e4d5fa;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(180, 150, 220, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .week:hover {
+      transform: translateY(-3px);
+    }
+
+    .week h2 {
+      color: #6d50a2;
+      margin-top: 0;
+    }
+
+    .week p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .week img {
+      margin-top: 1rem;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.photo-grid img {
+  flex: 1 1 calc(48% - 1rem);
+  max-width: calc(48% - 1rem);
+  border-radius: 8px;
+  object-fit: cover;
+  height: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 600px) {
+  .photo-grid img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Internship Blog</h1>
+  </header>
+  <nav>
+    <a href="#week1">Week 1</a>
+    <a href="#week2">Week 2</a>
+    <a href="#week3">Week 3</a>
+  </nav>
+  <div class="content">
+    <div class="week" id="week1">
+      <h2>Week 1: Settling In and Getting Started (5/26–5/30)</h2>
+      <p>The first week in Huntsville was spent with getting acquainted and immersing myself in the internship.</p>
+      <p><b>Monday</b> (5/26), we moved into the Airbnb and worked through the materials Mundy shared. I also helped Nasya with Git and we all talked about our project goals to get a better idea of what everyone is doing..</p>
+
+      <p><b>Tuesday</b> was our first full day. We set up our computers, got a quick tour of the Spine and teh AI lab, and had lunch with the AI branch at Viet Huong. The food was pretty good but I got to talk to a bunch of new people which was great. In the afternoon, we met again with Mundy for a more in-depth walkthrough of our summer goals, which include a blog, journal club, and presentations.</p>
+
+      <p><b>Wednesday</b> was mostly training. I had a project meeting with Mundy and learned that I’ll be working on an AI-focused task, while Nasya is exploring persistent homology. I started digging into RAG (retrieval-augmented generation) and got a better sense of the tech stack. Another tour later in the day introduced us to people working in RL, modeling, and other areas. We wrapped up by sorting out logistics like timesheets and talking weekend plans.</p>
+
+      <p><b>Thursday</b>, I focused on researching different RAG approaches and even got a small fake-data database up and running. I had another chat with Mundy to clarify project goals.</p>
+
+      <p><b>Friday</b> I narrowed my RAG approach and tried running a local LLM to experiment with prompt strategies. We had lunch for Dylan’s last day, then later I had a great chat with a member of the electronics and GNC team along with a really awesome tour of some stuff the GNC guy was working on. Mundy also gave us a solid session on professional development—things like networking, writing, and pushing ourselves a bit beyond the base requirements. I closed the week helping Nasya and Daniel troubleshoot parts of their projects.</p>
+
+      <div class="photo-grid">
+        <img src="images/week1_1.jpg" alt="">
+        <img src="images/week1_2.jpg" alt="">
+        <img src="images/week1_3.jpg" alt="">
+        <img src="images/week1_4.jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="week" id="week2">
+      <h2>Week 2</h2>
+      <p></p>
+      <img src="images/week2.jpg" alt="Week 2 photo">
+    </div>
+
+    <div class="week" id="week3">
+      <h2>Week 3</h2>
+      <p></p>
+      <img src="images/week3.jpg" alt="Week 3 photo">
+    </div>
+  </div>
+</body>
+</html>
