@@ -4,39 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Internship Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f6f0fb;
-      color: #2e2e2e;
+      background-color: #fafafa;
+      color: #1e1e1e;
+      line-height: 1.8;
     }
 
     header {
-      background-color: #bba8e4;
-      padding: 2rem 1rem;
+      background-color: #6d50a2;
+      padding: 3rem 1rem;
       text-align: center;
-      color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     header h1 {
+      font-size: 2.75rem;
       margin: 0;
-      font-size: 2.2rem;
+      font-weight: 700;
     }
 
     nav {
-      background-color: #e2d6f7;
-      padding: 0.75rem;
+      background-color: #efe9f9;
+      padding: 1rem 0;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
 
     nav a {
       color: #5a3e85;
-      margin: 0 1rem;
+      margin: 0 1.25rem;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
       transition: color 0.2s ease;
     }
 
@@ -45,90 +49,97 @@
     }
 
     .content {
-      max-width: 900px;
-      margin: 2rem auto;
+      max-width: 800px;
+      margin: 3rem auto;
       padding: 0 1.5rem;
     }
 
     .week {
-      background: #fff;
-      border: 1px solid #e4d5fa;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(180, 150, 220, 0.1);
-      transition: transform 0.2s ease;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2.25rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ececec;
+      transition: box-shadow 0.2s ease;
     }
 
     .week:hover {
-      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     }
 
     .week h2 {
+      font-size: 1.75rem;
       color: #6d50a2;
       margin-top: 0;
     }
 
     .week p {
-      line-height: 1.7;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #333;
     }
 
     .week img {
       margin-top: 1rem;
       max-width: 100%;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     }
 
-
     .photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  justify-content: space-between;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: space-between;
+    }
 
-.photo-grid img {
-  flex: 1 1 calc(48% - 1rem);
-  max-width: calc(48% - 1rem);
-  border-radius: 8px;
-  object-fit: cover;
-  height: auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+    .photo-grid img {
+      flex: 1 1 calc(48% - 1rem);
+      max-width: calc(48% - 1rem);
+      border-radius: 10px;
+      object-fit: cover;
+      height: auto;
+    }
 
-@media (max-width: 600px) {
-  .photo-grid img {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-
+    @media (max-width: 600px) {
+      .photo-grid img {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>My Internship Blog</h1>
   </header>
+
   <nav>
     <a href="#week1">Week 1</a>
     <a href="#week2">Week 2</a>
     <a href="#week3">Week 3</a>
   </nav>
+
   <div class="content">
     <div class="week" id="week1">
-      <h2>Week 1: Settling In and Getting Started (5/26–5/30)</h2>
+      <h2>Week 1</h2>
       <p>
-      My first week in Huntsville was filled with meeting new people, learning new things, and seeing things I didn't even know existed.  From the very start, Leidos Dynetics has created an environment that’s not only technically exciting but also genuinely supportive. Everyone I’ve met has been welcoming, curious about our work, and more than willing to share their own experiences and advice.
-      <br/> My friends and I arrived on Monday (5/26), moved into the Airbnb, and immediately  got to work exploring the materials Mundy had given us to study. 
-      <br/>
-      The following few days were focused on getting oriented, meeting new people, setting up our spaces, and learning more about our projects. Mundy was great about giving us a strong start and making sure we were comfortable. What stood out to me the most this week was the company culture. I could've never imagined how inviting and just generally nice the community at Leidos Dynetics is, especially the AI and Machine Learning Branch. 
-      <br/>
-      I'm more than excited to keep building on this momentum and continue learning new things everyday. 
-    </p>
+        My first week in Huntsville was filled with meeting new people, learning new things, and seeing things I didn't even know existed.
+        From the very start, Leidos Dynetics has created an environment that’s not only technically exciting but also genuinely supportive.
+        Everyone I’ve met has been welcoming, curious about our work, and more than willing to share their own experiences and advice.
+      </p>
+      <p>
+        My friends and I arrived on Monday (5/26), moved into the Airbnb, and immediately got to work exploring the materials Mundy had given us to study.
+        The following few days were focused on getting oriented, meeting new people, setting up our spaces, and learning more about our projects.
+        Mundy was great about giving us a strong start and making sure we were comfortable.
+      </p>
+      <p>
+        What stood out to me the most this week was the company culture.
+        I could've never imagined how inviting and just generally nice the community at Leidos Dynetics is—especially the AI and Machine Learning Branch.
+        I'm more than excited to keep building on this momentum and continue learning new things every day.
+      </p>
 
       <div class="photo-grid">
         <img src="images/week1_1.jpg" alt="">
@@ -136,18 +147,19 @@
         <img src="images/week1_3.jpg" alt="">
         <img src="images/week1_4.jpg" alt="">
       </div>
-
     </div>
 
     <div class="week" id="week2">
       <h2>Week 2</h2>
-      <p></p>
+      <p>My second week is where I really got to dive deeper into my actual work and start getting my hands dirty. My project in particular dealt with integration into a larger code base. This is usually an incredibly daunting task; however, the engineers here were eager to help me out and explain the entire code base to me so I got a great understanding of the bigger picture. This allowed for quick turn around on my own code -- less time spent having to parse other coders stuff meant I could focus on making mine the best it could be. By the end of the end of the week I had a nice MVP that I could show off to my mentors. 
+      </p>
+      <p>Finally, on Friday, my peers and I gave presentations to our mentors about our project, where it is, where its going, and what we've learned. This was one of my favorite parts of the week. I got to not only present my project and get very valuable feedback on it, but I also got to watch my friends present theirs. It was really cool to see. The plan is to do this every week until the end of the internship as to prepare us for our final presentation in front of the big guys.</p>
       <img src="images/week2.jpg" alt="Week 2 photo">
     </div>
 
     <div class="week" id="week3">
       <h2>Week 3</h2>
-      <p></p>
+      <p>Coming soon...</p>
       <img src="images/week3.jpg" alt="Week 3 photo">
     </div>
   </div>
