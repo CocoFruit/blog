@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parker Hance | Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #1f2937;
+      color: #ffffff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
+    }
+
+    header p {
+      font-size: 1.125rem;
+      margin: 0;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: #111827;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      color: #f9fafb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #374151;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    article {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 2rem;
+    }
+
+    article:last-child {
+      border-bottom: none;
+    }
+
+    article h2 {
+      color: #111827;
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    article p {
+      margin: 1rem 0;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem auto 0 auto;
+      max-width: 1000px;
+      justify-items: center;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Internship Updates</h1>
+    <p>Weekly reflections from my role at Leidos Dynetics</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="internship.html">Internship</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <main class="container">
+    <article id="week1">
+      <h2>Week 1</h2>
+      <p>My first week in Huntsville was filled with meeting new people, learning new things, and seeing things I didn't
+        even know existed.
+        From the very start, Leidos Dynetics has created an environment that’s not only technically exciting but also
+        genuinely supportive.
+        Everyone I’ve met has been welcoming, curious about our work, and more than willing to share their own
+        experiences and advice.
+      </p>
+      <p>My friends and I arrived on Monday (5/26), moved into the Airbnb, and immediately got to work exploring the
+        materials Mundy had given us to study.
+        The following few days were focused on getting oriented, meeting new people, setting up our spaces, and learning
+        more about our projects.
+        Mundy was great about giving us a strong start and making sure we were comfortable.
+      </p>
+      <p>What stood out to me the most this week was the company culture.
+        I could've never imagined how inviting and just generally nice the community at Leidos Dynetics is—especially
+        the AI and Machine Learning Branch.
+        I'm more than excited to keep building on this momentum and continue learning new things every day.
+      </p>
+
+      <div class="photo-grid">
+        <img src="images/week1_1.jpg" alt="Week 1 photo 1">
+        <img src="images/week1_3.jpg" alt="Week 1 photo 3">
+        <br /><img src="images/week1_2.jpg" alt="Week 1 photo 2">
+        <img src="images/week1_4.jpg" alt="Week 1 photo 4">
+      </div>
+    </article>
+
+    <article id="week2">
+      <h2>Week 2</h2>
+      <p>My second week is where I really got to dive deeper into my actual work and start getting my hands dirty. My
+        project in particular dealt with integration into a larger code base. This is usually an incredibly daunting
+        task; however, the engineers here were eager to help me out and explain the entire code base to me so I got a
+        great understanding of the bigger picture. This allowed for quick turn around on my own code -- less time spent
+        having to parse other coders stuff meant I could focus on making mine the best it could be. By the end of the
+        week I had a nice MVP that I could show off to my mentors.</p>
+      <p>Finally, on Friday, my peers and I gave presentations to our mentors about our project, where it is, where it's
+        going, and what we've learned. This was one of my favorite parts of the week. I got to not only present my
+        project and get very valuable feedback on it, but I also got to watch my friends present theirs. It was really
+        cool to see. The plan is to do this every week until the end of the internship as to prepare us for our final
+        presentation in front of the big guys.</p>
+      <div class="photo-grid">
+        <img src="images/week2.jpg" alt="Week 2 photo">
+      </div>
+    </article>
+
+    <article id="week3">
+      <h2>Week 3</h2>
+      <p>
+        I figured I’d start this week’s post by diving deeper into my project. The core idea is to build a modular LLM
+        pipeline that can integrate easily with other systems. Up until this week, my pipeline could:
+      </p>
+      <ul>
+        <li>Take in JSON data, convert it to SQL, and append it to a database</li>
+        <li>Accept a server-side question about the data, generate an SQL query with an LLM, query the database, and
+          return the results — all server-side</li>
+      </ul>
+      <p>
+        This basic version worked but had several flaws and missing pieces. So this week, I focused on expanding its
+        capabilities. I added:
+      </p>
+      <ul>
+        <li>Live data streaming into the database</li>
+        <li>Support for imperative (action-based) input</li>
+        <li>An LLM module to turn raw data into natural language</li>
+        <li>A simple speech-to-speech pipeline</li>
+        <li>Client-side question-and-answer capability</li>
+        <li>A full architecture redesign to make the whole pipeline more modular and developer-friendly</li>
+      </ul>
+      <p>
+        Getting live data flow working meant digging into HTTP requests, port forwarding, and optimizing speed and
+        bandwidth. I designed a batching system to send data in chunks instead of one item at a time, which made a big
+        difference.
+      </p>
+      <p>
+        The imperative input feature started out simple: I used a small LLM, did some prompt engineering to pick actions
+        from a list, and parsed the output. But by the end of the week, I overhauled it completely. Originally, adding a
+        new action required editing multiple files and wasn’t intuitive. Now, with a cleaner object-oriented approach, I
+        created an <code>Action</code> class. Developers can simply extend this class to define new actions — with a
+        name, description, example, and the actual code to run. An <code>ActionDispatcher</code> handles registering and
+        calling them. This is much more elegant and I'm very happy with the outcome. 
+      </p>
+      <p>
+        The speech-to-speech pipeline was surprisingly straightforward. I used OpenAI’s Whisper Small for speech-to-text
+        and a separate text-to-speech model, then connected them — a good example of how clear pipeline design makes
+        life easier. The size of these speech to text models blew me out of the water. I mean speech to text is halfway magical 
+        and these models are in the low millions of parameters!
+      </p>
+      <p>
+        The biggest challenge of the week, by far, was setting up the client-side question and answer system. Without getting too deep into
+        the weeds: I needed two servers to communicate securely, which required port forwarding and a custom proxy
+        server to handle traffic. It took a full day of troubleshooting, overhauling, rubber ducking with Daniel, and two hot chocolates, but it finally worked.
+      </p>
+      <p>
+        Overall, this week really pushed me to apply and expand my knowledge across multiple areas — and I’m excited to
+        keep improving this system.
+      </p>
+
+      <div class="photo-grid">
+        <img src="images/week3.jpg" alt="Week 3 photo">
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Parker Hance. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
