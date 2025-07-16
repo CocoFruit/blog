@@ -128,9 +128,9 @@
       <h2>Week 1</h2>
       <p>My first week in Huntsville was filled with meeting new people, learning new things, and seeing things I didn't
         even know existed.
-        From the very start, Leidos Dynetics has created an environment that’s not only technically exciting but also
+        From the very start, Leidos Dynetics has created an environment that's not only technically exciting but also
         genuinely supportive.
-        Everyone I’ve met has been welcoming, curious about our work, and more than willing to share their own
+        Everyone I've met has been welcoming, curious about our work, and more than willing to share their own
         experiences and advice.
       </p>
       <p>My friends and I arrived on Monday (5/26), moved into the Airbnb, and immediately got to work exploring the
@@ -174,7 +174,7 @@
     <article id="week3">
       <h2>Week 3</h2>
       <p>
-        I figured I’d start this week’s post by diving deeper into my project. The core idea is to build a modular LLM
+        I figured I'd start this week's post by diving deeper into my project. The core idea is to build a modular LLM
         pipeline that can integrate easily with other systems. Up until this week, my pipeline could:
       </p>
       <ul>
@@ -202,13 +202,13 @@
       <p>
         The imperative input feature started out simple: I used a small LLM, did some prompt engineering to pick actions
         from a list, and parsed the output. But by the end of the week, I overhauled it completely. Originally, adding a
-        new action required editing multiple files and wasn’t intuitive. Now, with a cleaner object-oriented approach, I
+        new action required editing multiple files and wasn't intuitive. Now, with a cleaner object-oriented approach, I
         created an <code>Action</code> class. Developers can simply extend this class to define new actions — with a
         name, description, example, and the actual code to run. An <code>ActionDispatcher</code> handles registering and
         calling them. This is much more elegant and I'm very happy with the outcome.
       </p>
       <p>
-        The speech-to-speech pipeline was surprisingly straightforward. I used OpenAI’s Whisper Small for speech-to-text
+        The speech-to-speech pipeline was surprisingly straightforward. I used OpenAI's Whisper Small for speech-to-text
         and a separate text-to-speech model, then connected them — a good example of how clear pipeline design makes
         life easier. The size of these speech to text models blew me out of the water. I mean speech to text is halfway
         magical
@@ -222,7 +222,7 @@
         two hot chocolates, but it finally worked.
       </p>
       <p>
-        Overall, this week really pushed me to apply and expand my knowledge across multiple areas — and I’m excited to
+        Overall, this week really pushed me to apply and expand my knowledge across multiple areas — and I'm excited to
         keep improving this system.
       </p>
 
@@ -235,7 +235,7 @@
       <p>
         Compared to last week, this one felt slower on the coding front but was just as valuable in other ways. I spent
         quite a bit of time in meetings discussing the future direction of my project. Nobody loves meetings, but I
-        really appreciate how much thought everyone — especially Mundy — puts into making sure I have meaningful,
+        really appreciate how much thought everyone (especially Mundy) puts into making sure I have meaningful,
         interesting tasks and a clear path forward. It means a lot to feel supported and trusted to steer this project
         where I think it should go.
       </p>
@@ -246,21 +246,22 @@
         tinkered with the UI to make it cleaner and more intuitive.
       </p>
       <p>
-        One highlight each week is being part of Mundy's group activities — our presentations, journal club, and the
-        AI/ML boot camp. This week’s presentation session went really well. Mundy helped me polish my slides with
+        One highlight each week is being part of Mundy's group activities: our presentations, journal club, and the
+        AI/ML boot camp. This week's presentation session went really well. Mundy helped me polish my slides with
         clearer graphics and better structure. After I presented, Daniel gave a mini-talk
-        about P vs NP — a classic computer science problem that was followed by a fun discussion and made me look forward to my
+        about P vs NP -- a classic computer science problem that was followed by a fun discussion and made me look
+        forward to my
         time to present even more.
       </p>
       <p>
-        For journal club, we read a paper introducing the basics of Information Theory. I’d never formally studied it
+        For journal club, we read a paper introducing the basics of Information Theory. I'd never formally studied it
         before, but after reading and watching a few follow-up videos, I felt like I started seeing Information Theory
-        concepts everywhere. It’s honestly amazing how one paper can give you a fresh lens on the world. Huge shoutout
+        concepts everywhere. It's honestly amazing how one paper can give you a fresh lens on the world. Huge shoutout
         to Mundy for picking such a thought-provoking read.
       </p>
       <p>
         To wrap up the week, we had our AI/ML boot camp session, where Mundy broke down how loss functions and gradient
-        descent work in training and backpropagation. Even though I’d seen these ideas before, getting to revisit them
+        descent work in training and backpropagation. Even though I'd seen these ideas before, getting to revisit them
         with clear explanations and examples really helped solidify my understanding.
       </p>
       <p>
@@ -268,6 +269,61 @@
         progress and deepening my knowledge base. Excited to see what next week brings!
       </p>
 
+    </article>
+
+    <article id="week5">
+      <h2>Week 5</h2>
+      <p> If Week 4 was about laying groundwork, Week 5 was about discovering just how much of that groundwork I could
+        rip up and rebuild smarter. Early in the week, I explored a larger LLM, Granite 3.3 (2.5B parameters), and
+        followed a LangChain tutorial on agentic RAG. It was decent, not production-level, but enough to make me
+        realize something slightly embarrassing: I'd been accidentally recreating half of LangChain over the past few
+        weeks. On the bright side, it meant I now understood the pieces deeply enough to trim away a ton of complexity.
+      </p>
+      <p> That realization hit me one night during dinner and I ended up locking in super hard for like 5 hours and
+        completetly rebuilding my pipeline around a much
+        simpler approach: using a vector database and a k-NN-based encoder to handle tool selection and slot filling.
+        The result is something surprisingly powerful, something like a lightweight Siri-for-missions. It's faster,
+        leaner, and often outperforms the full LLM-based approach in practical scenarios. Huge win. </p>
+      <p> On the project coordination side, I had yet another direction-setting meeting, but this one felt actually
+        really ended up with some useful infromation. I shifted focus to integrating my chatbot
+        into ADAPT GO and got it running with real functionality, including generating and editing human constraint
+        objects on the fly. </p>
+      <p> I also cleaned up the UI and polished the interaction between ADAPT and my NLP model. I now have a personal
+        GitLab repo where I'm tracking the project and keeping things modular. One fun breakthrough was getting the bot
+        to handle incomplete user instructions: like when someone says “add a task,” and it follows up naturally to
+        fill in the missing details. It's a small thing, but it really makes the system feel conversational. </p>
+      <p> There's still room for refinement. The slot filler struggles with subtle semantics — like confusing "set
+        Raptor 2's priority to 5" and interpreting it as priority 2. I'm experimenting with regex and semantic cues for
+        now, but I may later explore training a more robust model with LLM-generated synthetic data. I'm also starting
+        to think about Chain-of-Thought-style reasoning and how to incorporate pre-planning logic without making the
+        system too slow or brittle. </p>
+      <p> Overall, this was my most transformative week yet. I tore down and rebuilt the pipeline, implemented key ADAPT
+        integrations, and came away with a system that's already looking solid for demos. There's a long road ahead, but
+        I'm starting to see how this all fits together — and I'm genuinely excited to keep pushing. </p>
+    </article>
+    <article id="week6">
+      <h2>Week 6</h2>
+      <p> This week started off rough. I hit a wall of uncertainty... not technical, but directional. The tasks I had
+        lined up (confidence thresholds, parallel instructions) felt more like maintenance than innovation, and I wasn't
+        excited to work on them. I kept circling the same question: what exactly should it do? The answer didn't come
+        quickly, and it left me feeling pretty stuck. </p>
+      <p> I filled some of that time doing light work: tweaking slides, reading papers, adding a feature here and there
+        (like handling low-confidence queries gracefully). But it wasn't until later in the week that things finally
+        started clicking again. I cleaned up the tool system, refactored big parts of the pipeline, and got the project
+        running locally with database integration (a surprisingly satisfying milestone). Presenting to Andrew helped
+        too, even if his reaction was more politely intrigued than wowed. </p>
+      <p> One key turning point was running into major issues when using actual entity IDs. The model began
+        hallucinating parameters and tools, and nothing behaved the way I expected. That frustration drove me to rebuild AGAIN. And through some more research, I learned about zero-shot intent classifiers and realized that was *exactly* what I needed. I got one
+        running and, for once, it just worked. It wasn't perfect, but it worked out of the box. So, I built fallback mechanisms and eventually landed on a really cool, new architecture. </p>
+      <p> Instead of relying on a single model with confidence thresholds, the new pipeline pools together multiple
+        intent-scoring strategies: zero-shot classification, keyword matching, semantic similarity, spaCy pattern
+        matching, and more. I score each method individually, weight them, and then rank to find the best match. It's
+        ensemble intent classification and it's shockingly effective. The system is now both more accurate and more
+        resilient. It's also way more satisfying to use. </p>
+      <p> Despite the slow start and occasional "why am I doing this" moments, this ended up being one of the most
+        productive weeks yet. I still have bugs to squash and weird behaviors to figure out, but the pipeline feels smarter,
+        cleaner, and closer to something I'd be proud to demo. That's a good place to be heading into the final stretch.
+      </p>
     </article>
   </main>
 
