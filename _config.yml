@@ -1,8 +1,8 @@
 # Site settings
 title: Parker Hance
 description: Thoughts, projects, and experiences
-baseurl: ""
-url: ""
+baseurl: "/blog" # GitHub Pages repository name
+url: "https://cocofruit.github.io" # Your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
