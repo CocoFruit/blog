@@ -3,28 +3,53 @@ layout: default
 title: Home
 ---
 
-<article>
-  <h2>Welcome to My Blog</h2>
-  <p>This is my personal space to share thoughts, projects, and anything I'm currently exploring. Feel free to browse my posts or check out my dedicated internship page for weekly updates from my current at Leidos.</p>
-</article>
+<div class="hero">
+  <h2>Hey, I'm Parker Hance 👋</h2>
+  <p>Student passionate about software engineering, AI, and machine learning. Currently interning at Leidos. I write about my projects, learnings, and experiences in tech.</p>
+</div>
 
-<article>
-  <h2>Recent Posts</h2>
+<div class="section-card">
+  <h2>📝 Recent Posts</h2>
   {% if site.posts.size > 0 %}
-  <ul>
+  <ul class="post-list">
     {% for post in site.posts limit:5 %}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        {% if post.excerpt %}
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
   {% else %}
-  <p>No posts yet. Check back soon!</p>
+  <p>No posts yet. Check back soon as I share my journey!</p>
   {% endif %}
-</article>
+</div>
 
-<article>
-  <h2>Internship Updates</h2>
-  <p>Curious about my internship experience? Head over to the <a href="{{ '/internship' | relative_url }}">Internship page</a> for week-by-week updates and photos!</p>
-</article>
+<div class="section-card">
+  <h2>💼 Internship @ Leidos</h2>
+  <p>Follow my summer 2026 internship journey with weekly updates, photos, and reflections. <a href="{{ '/internship' | relative_url }}">View all weeks →</a></p>
+  
+  {% assign recent_weeks = site.internship_2026 | sort: 'week' | reverse %}
+  {% if recent_weeks.size > 0 %}
+  <ul class="post-list">
+    {% for week in recent_weeks limit:3 %}
+      <li>
+        <h3><a href="{{ week.url | relative_url }}">{{ week.title }}</a></h3>
+        <span class="post-meta">Week {{ week.week }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+<div class="section-card">
+  <h2>📸 Recent Photos</h2>
+  <div class="photo-grid">
+    <img src="{{ '/assets/images/week1_1.jpg' | relative_url }}" alt="Internship photo 1" loading="lazy">
+    <img src="{{ '/assets/images/week1_2.jpg' | relative_url }}" alt="Internship photo 2" loading="lazy">
+    <img src="{{ '/assets/images/week1_3.jpg' | relative_url }}" alt="Internship photo 3" loading="lazy">
+    <img src="{{ '/assets/images/week1_4.jpg' | relative_url }}" alt="Internship photo 4" loading="lazy">
+  </div>
+</div>
