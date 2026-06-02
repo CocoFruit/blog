@@ -4,12 +4,12 @@ title: Home
 ---
 
 <div class="hero">
-  <h2>Hey, I'm Parker Hance 👋</h2>
-  <p>Student passionate about software engineering, AI, and machine learning. Currently interning at Leidos. I write about my projects, learnings, and experiences in tech.</p>
+  <h2>Hey, I'm Parker Hance</h2>
+  <p>I'm a student passionate about technology in its truest sense—not just software and hardware, but the application of knowledge to solve problems. I write about my projects, what I learn, and my experiences along the way.</p>
 </div>
 
 <div class="section-card">
-  <h2>📝 Recent Posts</h2>
+  <h2>Recent Posts</h2>
   {% if site.posts.size > 0 %}
   <ul class="post-list">
     {% for post in site.posts limit:5 %}
@@ -28,16 +28,16 @@ title: Home
 </div>
 
 <div class="section-card">
-  <h2>💼 Internship @ Leidos</h2>
-  <p>Follow my summer 2026 internship journey with weekly updates, photos, and reflections. <a href="{{ '/internship' | relative_url }}">View all weeks →</a></p>
+  <h2>Internship @ Leidos</h2>
+  <p>Follow my summer internship journey with weekly updates and reflections. <a href="{{ '/internship' | relative_url }}">View all →</a></p>
   
-  {% assign recent_weeks = site.internship_2026 | sort: 'week' | reverse %}
-  {% if recent_weeks.size > 0 %}
+  {% assign internship_posts = site.posts | where_exp: "post", "post.title contains 'Internship'" | sort: 'date' | reverse %}
+  {% if internship_posts.size > 0 %}
   <ul class="post-list">
-    {% for week in recent_weeks limit:3 %}
+    {% for post in internship_posts %}
       <li>
-        <h3><a href="{{ week.url | relative_url }}">{{ week.title }}</a></h3>
-        <span class="post-meta">Week {{ week.week }}</span>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <span class="post-meta">{{ post.date | date: "%B %Y" }}</span>
       </li>
     {% endfor %}
   </ul>
@@ -45,7 +45,7 @@ title: Home
 </div>
 
 <div class="section-card">
-  <h2>📸 Recent Photos</h2>
+  <h2>Recent Photos</h2>
   <div class="photo-grid">
     <img src="{{ '/assets/images/week1_1.jpg' | relative_url }}" alt="Internship photo 1" loading="lazy">
     <img src="{{ '/assets/images/week1_2.jpg' | relative_url }}" alt="Internship photo 2" loading="lazy">

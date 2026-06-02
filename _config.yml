@@ -8,15 +8,6 @@ url: "https://cocofruit.github.io" # Your GitHub Pages URL
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-# Collections
-collections:
-  internship_2025:
-    output: true
-    permalink: /internship/2025/:name/
-  internship_2026:
-    output: true
-    permalink: /internship/2026/:name/
-
 # Defaults
 defaults:
   - scope:
@@ -24,13 +15,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "internship_2025"
-    values:
-      layout: "internship_post"
-  - scope:
-      path: ""
-      type: "internship_2026"
-    values:
-      layout: "internship_post"
