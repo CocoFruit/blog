@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article id="{{ page.slug }}">
+  <h2>{{ page.title }}</h2>
+  {{ content }}
+
+  {% if page.photos %}
+  <div class="photo-grid">
+    {% for photo in page.photos %}
+      <img src="{{ photo | relative_url }}" alt="{{ page.title }} photo">
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>
