@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Summer 2026 Internship at Leidos - Parker Hance</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="background">
+
+<div class="top">
+  <div class="center">
+    <h1 class="title comic-text neon-text" >Point Nemo</h1>
+  </div>
+  <div class="right">
+    <img src="../images/point_nemo.png" height="100px"/>
+  </div>
+</div>
+
+<p><a href="../index.html">Home</a> | <a href="../about.html">About</a> | <a href="../internship.html">Internship</a></p>
+
+<hr>
+
+<div class="middle">
+<h2>Summer 2026 Internship at Leidos</h2>
+
+<p><i>June 2026</i></p>
+
+<p>My summer 2026 internship at Leidos Dynetics in Huntsville, Alabama. Following up on last year's work and taking on new challenges.</p>
+
+<p><b>Week 3</b></p>
+
+<p>This week, Skye and I were pleased to present to Mundy a new, more general orchestration/supervisor style architecture. Upon first proposal, he actually seemed to like it! In our meeting, we presented our idea but left off our idea for a "validator" agent and we were going to bring it up at the end, but Mundy suggested it before we could get to that part. So that was pretty cool to be able to be like "yeah we already thought about that."</p>
+<p>
+    The naive, more simple, way of doing this is without a validator and just letting the orchestrator deal with that. But that goes against the whole specific agentic paradaigm. A more thoughtout, more agentic, solution would look something like this:
+</p>
+<p>
+    - Orchestrator: takes in user input and creates a plan / tasks and directs different agents to do things. Retreieves relevant context from the context manager
+</p>
+<p>
+    - Context Manager: holds onto context from throughout the conversation(s) as well as throughout the user interactions
+</p>
+<p>
+    - Validator: Checks after LLM generations if the agent did what was expected. If not, requery.  
+</p>
+<p>
+    Developing side by side with someone else is a very interesting task. Especially because I tend to work faster than most (including Skye) and I have a very different development style than most. I tend to jump in quickly and want to prototype while most people want to research deeply before jumping in. There's pros and cons to both, I just find reading boring and less usefull than writing for <i>me</i>. However, I am forced to slow down and explain my ideas to Skye before jumping in, otherwise I'm a dick of a partner for a project. This has been actually quite helpful. Sometimes I'll turn around to explain the architecture I'm about to implement and while talking about it I'll remember something or find something I don't like and can talk through it. 
+</p>
+<p>
+    One cool thing I thought of that I really like in our architecture has to do with the librarian. The librarian is an agent that can write custom SQL queries (and a few premade ones) to query a database. This agent is a READ-ONLY agent. Many people would jump to having an agent that can do READ and WRITE 
+</p>
+
+<p><i>Highlights</i></p>
+
+<ul>
+<li>Orientation and onboarding
+<li>Met my team and mentor
+<li>Set up development environment
+<li>First team meetings and project overview
+</ul>
+
+<p>It's been an exciting start, and I'm looking forward to diving deeper into the work!</p>
+
+
+
+<hr>
+
+<p><a href="../internship.html">&larr; Back to Internship</a></p>
+
+<p><font size="-1">&copy; 2026 Parker Hance</font></p>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+.middle {
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(84, 44, 241);
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px;
+  background-color: rgb(33, 33, 32);
+  color:rgb(254, 253, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px rgba(0, 123, 255, 0.5);
+}
+.quote {
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  width: 300px;
+  position: relative;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: medium;
+
+}
+.junkbox{
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  width: 300px;
+  background-color: black;
+  color: rgb(95, 218, 105);
+  padding: 10px;
+  font-size: 40px;
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.junk_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px dashed rgb(244, 199, 244);
+  margin: 10px;
+  padding: 4px;
+  background-color: rgb(0, 0, 0);
+}
+.text_container{
+  gap: 10px;
+  border: 1px dashed rgb(244, 199, 244);
+  margin: 10px;
+  padding: 4px;
+  background-color: rgb(0, 0, 0);
+}
+.inverted_image {
+  height:300px;
+  width: 300px;
+  filter: hue-rotate(279deg) saturate(6);
+}
+.background {
+  background-color: rgb(179, 152, 152);
+  background-image: url("images/tiling_stars.jpg");
+}
+.center {
+  flex: 1;
+  text-align: center;
+}
+.right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title {
+  font-size: 80px;
+  margin:0%;
+}
+.comic-text {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+body{
+  color: white;
+}
+
+
+
+.neon-text {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  
+  /* Apply infinite pulsing animation */
+  animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 5px -5px 10px #cddbdb, 0 0 10px #00f2fe, 0 0 15px #95e9ee;
+    color: #fff;
+  }
+  100% {
+    text-shadow: -3px -3px 5px #fcd0e8, 0 0 5px #f8f3f8, 0 0 7px #eed4e8;
+    color: #dfb7d5;
+  }
+}
