@@ -13,26 +13,36 @@
 .quote {
   justify-content: center;
   align-items: center;
+  text-align: justify;
   aspect-ratio: 1;
   width: 300px;
+  height: 300px;
   position: relative;
   background-repeat: no-repeat;
   color: whitesmoke;
   padding: 10px;
   font-size: medium;
+  overflow: hidden;
+  word-wrap: break-word;
+  box-sizing: border-box;
 
 }
 .junkbox{
+  display: flex;
   align-content: center;
   text-align: center;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
   width: 300px;
-  background-color: black;
+  height: 300px;
+  position: relative;
+  /* background-color: black; */
+  mix-blend-mode: screen;
   color: rgb(95, 218, 105);
   padding: 10px;
   font-size: 40px;
+  box-sizing: border-box;
 }
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
@@ -48,17 +58,40 @@
     visibility: hidden;
   }
 }
+.recent-posts {
+  width: 100%;
+  padding: 15px;
+}
+.recent-posts h2 {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #000000;
+}
+.recent-posts table {
+  border-color: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+.recent-posts a {
+  text-decoration: none;
+  transition: all 0.1s;
+}
+.recent-posts a:hover {
+  color: #00ff00 !important;
+  text-decoration: underline;
+}
 .junk_container{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   border: 1px dashed rgb(244, 199, 244);
   margin: 10px;
   padding: 4px;
   background-color: rgb(0, 0, 0);
+  background-image: url("images/webb-dark.png");
 }
 .text_container{
   gap: 10px;
@@ -67,9 +100,7 @@
   padding: 4px;
   background-color: rgb(0, 0, 0);
 }
-.inverted_image {
-  height:300px;
-  width: 300px;
+.weird {
   filter: hue-rotate(279deg) saturate(6);
 }
 .background {
@@ -103,7 +134,12 @@
 body{
   color: white;
 }
-
+hr.glow {
+  border: none;
+  height: 2px;
+  background-color: #00ffff; 
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff; /* Layered glow effect */
+}
 
 
 .neon-text {

@@ -2,6 +2,16 @@
 <head>
 <title>Summer 2026 Internship at Leidos - Parker Hance</title>
 <link rel="stylesheet" href="../style.css">
+<style>
+  h3 {
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  }
+  h4 {
+    color: #ff00ff;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
+  }
+</style>
 </head>
 <body class="background">
 
@@ -14,9 +24,23 @@
   </div>
 </div>
 
-<p><a href="../index.html">Home</a> | <a href="../about.html">About</a> | <a href="../internship.html">Internship</a></p>
+<div class="middle" align="center">
+  <table border="2" cellpadding="6" cellspacing="0" bgcolor="#000080">
+    <tr>
+      <td><a href="../index.html">
+          <font color="#ffff00" face="Arial"><b>[ HOME ]</b></font>
+        </a></td>
+      <td><a href="../about.html">
+          <font color="#ffff00" face="Arial"><b>[ ABOUT ]</b></font>
+        </a></td>
+      <td><a href="../internship.html">
+          <font color="#ffff00" face="Arial"><b>[ INTERNSHIP ]</b></font>
+        </a></td>
+    </tr>
+  </table>
+</div>
 
-<hr>
+<hr class="glow">
 
 <div class="middle">
 <h2>Summer 2026 Internship at Leidos</h2>
@@ -25,40 +49,78 @@
 
 <p>My summer 2026 internship at Leidos Dynetics in Huntsville, Alabama. Following up on last year's work and taking on new challenges.</p>
 
-<p><b>Week 3</b></p>
+<hr>
+
+<h3><b>Week 3 (06/01/26)</b></h3>
+
+<h4>Presenting the Architecture</h4>
 
 <p>This week, Skye and I were pleased to present to Mundy a new, more general orchestration/supervisor style architecture. Upon first proposal, he actually seemed to like it! In our meeting, we presented our idea but left off our idea for a "validator" agent and we were going to bring it up at the end, but Mundy suggested it before we could get to that part. So that was pretty cool to be able to be like "yeah we already thought about that."</p>
-<p>
-    The naive, more simple, way of doing this is without a validator and just letting the orchestrator deal with that. But that goes against the whole specific agentic paradaigm. A more thoughtout, more agentic, solution would look something like this:
-</p>
-<p>
-    - Orchestrator: takes in user input and creates a plan / tasks and directs different agents to do things. Retreieves relevant context from the context manager
-</p>
-<p>
-    - Context Manager: holds onto context from throughout the conversation(s) as well as throughout the user interactions
-</p>
-<p>
-    - Validator: Checks after LLM generations if the agent did what was expected. If not, requery.  
-</p>
-<p>
-    Developing side by side with someone else is a very interesting task. Especially because I tend to work faster than most (including Skye) and I have a very different development style than most. I tend to jump in quickly and want to prototype while most people want to research deeply before jumping in. There's pros and cons to both, I just find reading boring and less usefull than writing for <i>me</i>. However, I am forced to slow down and explain my ideas to Skye before jumping in, otherwise I'm a dick of a partner for a project. This has been actually quite helpful. Sometimes I'll turn around to explain the architecture I'm about to implement and while talking about it I'll remember something or find something I don't like and can talk through it. 
-</p>
-<p>
-    One cool thing I thought of that I really like in our architecture has to do with the librarian. The librarian is an agent that can write custom SQL queries (and a few premade ones) to query a database. This agent is a READ-ONLY agent. Many people would jump to having an agent that can do READ and WRITE 
-</p>
 
-<p><i>Highlights</i></p>
+<p>The naive, more simple, way of doing this is without a validator and just letting the orchestrator deal with that. But that goes against the whole specific agentic paradaigm. A more thoughtout, more agentic, solution would look something like this:</p>
 
 <ul>
-<li>Orientation and onboarding
-<li>Met my team and mentor
-<li>Set up development environment
-<li>First team meetings and project overview
+  <li><b>Orchestrator:</b> takes in user input and creates a plan / tasks and directs different agents to do things. Retreieves relevant context from the context manager</li>
+  <li><b>Context Manager:</b> holds onto context from throughout the conversation(s) as well as throughout the user interactions</li>
+  <li><b>Validator:</b> Checks after LLM generations if the agent did what was expected. If not, requery.</li>
 </ul>
 
-<p>It's been an exciting start, and I'm looking forward to diving deeper into the work!</p>
+<p>Developing side by side with someone else is a very interesting task. Especially because I tend to work faster than most (including Skye) and I have a very different development style than most. I tend to jump in quickly and want to prototype while most people want to research deeply before jumping in. There's pros and cons to both, I just find reading boring and less usefull than writing for <i>me</i>. However, I am forced to slow down and explain my ideas to Skye before jumping in, otherwise I'm a dick of a partner for a project. This has been actually quite helpful. Sometimes I'll turn around to explain the architecture I'm about to implement and while talking about it I'll remember something or find something I don't like and can talk through it.</p>
 
+<p>One cool thing I thought of that I really like in our architecture has to do with the librarian. The librarian is an agent that can write custom SQL queries (and a few premade ones) to query a database. This agent is a READ-ONLY agent. Many people would jump to having an agent that can do READ and WRITE but we're trying to lean into specialization as much as we can as to reduce the cognative load on the models.</p>
 
+<h4>Research Week</h4>
+
+<p>This week was fortunately and unfortunately a looot of research. It was fortunate as I had to take a break from my standard go go go style and actually read what everyone else is doing and ground myself. It is unfortunate because I'm really not the greatest at reading. Our tasking for most of the week was to reserach and get working with some of the out of the box orchestration libraries.</p>
+
+<p>Mundy mentioned some cool ideas like a garbage collector / compactor that looks at other agents' contexts and summarizes them and stores them or whatever. This is a great idea and something I've never really thought about. Large contexts are super common with the type of stuff we'll be working with (databse and mutli hop) so this could prove to be super useful. The model for the compactor doesn't have to be big as summarization is like one of the easiest things for an LLM. I think we could get sub 20B and not want any more tbh.</p>
+
+<p>Further, Mundy set up a meeting with some other people who Skye and I got to talk to so we could get more a grasp on the context of our tool as well as get idea for features. Although I can't specifically say what kind of features are being requested, I can say theyre very interesting and super doable. During the meeting though, I did find myself wondering if it was really worth it to do the things were doing? Like paying thousands and thousands of dollars for resaerch as well as hudnreds/thousands of dollars for LLM usage? I think Mundy would say its not about what we're developing now for these specific use cases, but for the future possibilites.</p>
+
+<p>After our meetings, Skye and I jumped right into research. Our ways of doing so varied quite a bit from each other. He tended to read a lot about it and generally took a longer time to get a grasp on it, where as I liked to just dive into development with it and learn as I go. I do think doing is one of (if not the best) way to learn something. However, I do see the limitations of this idea. There were some features he would find that I may not because I was just going with the first things avaialble.</p>
+
+<p>I was looking at LangChain at this time and was trying to implement it. I saw something called LangGraph and thought it looked so awesome so I really wanted to make that work. But Langgraph seemed to like to be very dev-determined and I didn't like that. But I didn't realize this very quickly and spent a good while trying to get it to work how I wanted it to.</p>
+
+<h4>Side Project: Command Line Devlog</h4>
+
+<p>I write these blogs at the end of the week or at the start of the next week. But during the week I keep a devlog. The devlog is kind of just a stream of conciousness in a markdown file where I record the date and time then just write whatever I'm doing or thinking. It can be annoying to keep a whole visual studio editor open, and I dont like notepad much. So for a while I was using powershell's "edit" command line editor to have it always open. But that got a little annoying because I like to keep my windows organized and alt-tabbing through unused things is annoying. So one morning I took an hour or so to do a little side project. Now, I know its not much of a "brag", but I used absolutely no AI to do this project. I used a specifc browser with no AI in the search results and what not. This was a nice break from the super fast paced AI world that we live in now.</p>
+
+<p>The project was to learn to write a batch file (I havn't even thought about Batch scripting in 6 years) to allow me to log thoughts as they come to me without having the file always open. So I researched and learned how to write batch scripts! Some cool features are it automatically record the time, allows for mutli line input until you type "q" and press enter, and it automatically puts the date. The date thing was a fun one because I had to write it to where it will read the whole file and look for the date, and if not then add it. I also made it accessable anywhere so I can just type "log" in my CMD or PShell and it will call that script and allow me to type into the one dev log. I was pretty proud of the script and had a really fun time making it. Here's the code:</p>
+
+<pre><code>@ECHO OFF
+setlocal enabledelayedexpansion
+
+set d=%date%
+set hhmm=%TIME:~0,5%
+set logfile="C:\Users\hancep\Documents\notes\devlog.md"
+
+findstr /c:"%d%" %logfile% > nul
+IF %ERRORLEVEL% EQU 0 ( echo. ) ELSE ( echo ### %d% >> %logfile% )
+
+echo.>> %logfile%
+echo #### %hhmm%>> %logfile%
+
+echo Write Your Log Here (type q to quit):
+:log_start
+set /p input=": "
+if /i "%input%"=="q" exit /b
+echo(!input!>> %logfile%
+goto log_start
+</code></pre>
+
+<h4>Out of Work</h4>
+<p>
+    I finally did something I've been really wanting to do even since last year when I interned here! I was looking up places to resin print for a pewter casting project I have in mind and on a reddit post I found someone saying to go to this makerspace in town called Makers Local 256. So I asked if Ryan and Jessica would want to come and they were game! So on their Tuesday open night we just walked in. Got a few looks like "are you supposed to be here" then they were all super cool and showed us around and talked to us. The first thing they said when we walked in was "do you guys happen to be college summer interns working for a defense contractor?" 
+</p>
+<p>
+    Anyways, we yapped and stuff and got to know some of the members. Lots of older folk but still a fun time. They genuinly every tool I could've thought about. They had everything from welders, a glass blowing area, sewing machines, to 3D printers. It was awesome. However it seems like the only really open time for non-members is Tuesdays at like 6:00PM. 
+</p>
+<p>
+    We also played quite a bit of pickleball this week! It feels great to get back into it, I've feel like I've improved a lot since last summer. 
+</p>
+<p>
+    Jessica (my roomate) and I wanted to see the G3 (possible G4) geomagnetic storm aurora so we stayed up on Friday and were going to find a park or mountain to go to but after like 15 minutes of looking I was like "why don't we just drive until we find a cool spot?" and thats what we did. We hopped on 72 for like 30 minutes away from town, took a few turns, and ended up at a really dark corn field. We parked and layed on the hood of the car and just yapped. Even though we didn't really get to see the aurora, it was still a lot of fun and the stars were really pretty. Things like that don't happen in Boston much. Its a lot harder to hang out with friends in a quiet and natural place, I missed it. 
+</p>
 
 <hr>
 
