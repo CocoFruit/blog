@@ -6,10 +6,11 @@
   margin-right: 150px;
   padding: 10px;
   background-color: rgb(33, 33, 32);
-  color:rgb(254, 253, 255);
+  color: rgb(254, 253, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px 4px rgba(0, 123, 255, 0.5);
 }
+
 .quote {
   justify-content: center;
   align-items: center;
@@ -27,7 +28,8 @@
   box-sizing: border-box;
 
 }
-.junkbox{
+
+.junkbox {
   display: flex;
   align-content: center;
   text-align: center;
@@ -44,43 +46,52 @@
   font-size: 40px;
   box-sizing: border-box;
 }
+
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
+
 @keyframes blink-animation {
   to {
     visibility: hidden;
   }
 }
+
 @-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
   }
 }
+
 .recent-posts {
   width: 100%;
   padding: 15px;
 }
+
 .recent-posts h2 {
   text-align: center;
   font-family: "Courier New", monospace;
   letter-spacing: 3px;
   text-shadow: 2px 2px #000000;
 }
+
 .recent-posts table {
   border-color: #00ff00;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
 }
+
 .recent-posts a {
   text-decoration: none;
   transition: all 0.1s;
 }
+
 .recent-posts a:hover {
   color: #00ff00 !important;
   text-decoration: underline;
 }
-.junk_container{
+
+.junk_container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -93,30 +104,36 @@
   background-color: rgb(0, 0, 0);
   background-image: url("images/webb-dark.png");
 }
-.text_container{
+
+.text_container {
   gap: 10px;
   border: 1px dashed rgb(244, 199, 244);
   margin: 10px;
   padding: 4px;
   background-color: rgb(0, 0, 0);
 }
+
 .weird {
   filter: hue-rotate(279deg) saturate(6);
 }
+
 .background {
   background-color: rgb(179, 152, 152);
   background-image: url("images/tiling_stars.jpg");
 }
+
 .center {
   flex: 1;
   text-align: center;
 }
+
 .right {
   position: absolute;
   right: 0;
   display: flex;
   align-items: center;
 }
+
 .top {
   display: flex;
   flex-direction: row;
@@ -124,21 +141,26 @@
   align-items: center;
   position: relative;
 }
+
 .title {
   font-size: 80px;
-  margin:0%;
+  margin: 0%;
 }
+
 .comic-text {
   font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
 }
-body{
+
+body {
   color: white;
 }
+
 hr.glow {
   border: none;
   height: 2px;
-  background-color: #00ffff; 
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff; /* Layered glow effect */
+  background-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  /* Layered glow effect */
 }
 
 
@@ -146,7 +168,7 @@ hr.glow {
   font-size: 4rem;
   color: #fff;
   text-align: center;
-  
+
   /* Apply infinite pulsing animation */
   animation: neonGlow 2s ease-in-out infinite alternate;
 }
@@ -156,8 +178,185 @@ hr.glow {
     text-shadow: 5px -5px 10px #cddbdb, 0 0 10px #00f2fe, 0 0 15px #95e9ee;
     color: #fff;
   }
+
   100% {
     text-shadow: -3px -3px 5px #fcd0e8, 0 0 5px #f8f3f8, 0 0 7px #eed4e8;
     color: #dfb7d5;
+  }
+}
+
+
+
+
+/* ai stuff  below */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 8px;
+}
+
+/* Main content panels */
+.middle {
+  width: calc(100% - 32px);
+  max-width: 1500px;
+  margin: 16px auto;
+  padding: 12px;
+}
+
+/* Header */
+.top {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.neon-text {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.right img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Navigation */
+.middle table {
+  max-width: 100%;
+}
+
+/* Main content grids */
+.junk_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+/* Quote boxes */
+.quote {
+  flex: 1 1 260px;
+  width: auto;
+  min-width: 0;
+  max-width: 320px;
+  height: auto;
+  min-height: 260px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Decorative boxes */
+.junkbox {
+  flex: 1 1 200px;
+  width: auto;
+  max-width: 300px;
+  min-width: 0;
+  height: auto;
+  min-height: 200px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Recent posts and other content panels */
+.recent-posts {
+  flex: 1 1 350px;
+  min-width: 0;
+  width: auto;
+  max-width: 100%;
+  padding: 12px;
+}
+
+/* Images should never overflow their containers */
+.junk_container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text introduction */
+.text_container {
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  padding: 12px;
+  line-height: 1.6;
+}
+
+/* Tables */
+.recent-posts table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.recent-posts td,
+.recent-posts th {
+  overflow-wrap: anywhere;
+}
+
+/* Badge collection */
+.badages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Smaller screens */
+@media (max-width: 900px) {
+  .right {
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .top {
+    justify-content: center;
+  }
+
+  .junk_container {
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .middle {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .title,
+  .neon-text {
+    font-size: 2.2rem;
+  }
+
+  .right img {
+    max-width: 55px;
+  }
+
+  .quote {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: 220px;
+  }
+
+  .junkbox {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .recent-posts {
+    flex: 1 1 100%;
+    padding: 5px;
+  }
+
+  .recent-posts table {
+    font-size: 0.85rem;
   }
 }
