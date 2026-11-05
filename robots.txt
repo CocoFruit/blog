@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cocofruit.github.io/blog/sitemap.xml
